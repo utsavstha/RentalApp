@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RentalApp</string>
+    <string name="text_listings">Listings</string>
+    <string name="text_search">Search</string>
+    <string name="text_saved">Saved</string>
+    <string name="text_Alerts">Alerts</string>
+    <string name="text_more">More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment new</string>
+    <string name="listing_dummy_top">1 bd, 1ba</string>
+</resources>
