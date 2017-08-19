@@ -5,15 +5,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import app.rental.utsavstha.rentalapp.R;
 import app.rental.utsavstha.rentalapp.activity.ListingsAdapter;
@@ -96,9 +93,26 @@ public class ListingFragment extends Fragment {
     }
 
     public void showDialog() {
-        Dialog dialog = new Dialog(getActivity(), android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+        final Dialog dialog = new Dialog(getActivity(), android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         dialog.setContentView(R.layout.listings_details_dialog);
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        ImageView backButton = dialog.findViewById(R.id.iv_listing_details_dialog_back);
+        final ImageView heartButton = dialog.findViewById(R.id.iv_listing_details_dialog_heart);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        heartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                heartButton.setImageResource(R.drawable.ic_heart_fill);
+            }
+        });
+
         dialog.show();
     }
 

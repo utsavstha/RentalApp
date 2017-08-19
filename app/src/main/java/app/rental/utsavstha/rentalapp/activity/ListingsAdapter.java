@@ -40,11 +40,21 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageView menuImage;
+        public ImageView menuImage, heart;
         public TextView menuName;
 
         public ViewHolder(View itemView) {
             super(itemView);
+
+            heart = itemView.findViewById(R.id.listing_item_heart);
+
+            heart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    heart.setImageResource(R.drawable.ic_heart_fill);
+                }
+            });
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
