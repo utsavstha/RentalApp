@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="8dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/listing_recyclerview_item_outer_title"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:text="@string/flatmates_and_paying_guests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:padding="4dp"
+            android:id="@+id/rv_listings_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/see_all"
+                android:tint="@color/colorPrimary"
+                android:rotation="180"
+                android:src="@drawable/ic_action_back"
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_toRightOf="@id/see_all"
+                android:text="SEE ALL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

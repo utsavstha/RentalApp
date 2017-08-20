@@ -13,17 +13,15 @@ import java.util.List;
 
 import app.rental.utsavstha.rentalapp.R;
 import app.rental.utsavstha.rentalapp.Utils.Dialogs;
+import app.rental.utsavstha.rentalapp.adapters.ListingsAdapter;
 import app.rental.utsavstha.rentalapp.adapters.ListingsOuterAdapter;
 import app.rental.utsavstha.rentalapp.interfaces.CallBacks;
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * to handle interaction events.
- * Use the {@link ListingFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Created by utsavstha on 8/20/17.
  */
-public class ListingFragment extends Fragment {
+
+public class SearchListings extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,10 +30,10 @@ public class ListingFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private ListingsOuterAdapter listingsAdapter;
+    private ListingsAdapter listingsAdapter;
     private RecyclerView listingRecyclerView;
 
-    public ListingFragment() {
+    public SearchListings() {
         // Required empty public constructor
     }
 
@@ -62,7 +60,7 @@ public class ListingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_listing, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_search_listings, container, false);
 
         init(rootView);
         return rootView;
@@ -70,7 +68,7 @@ public class ListingFragment extends Fragment {
 
     private void init(View rootView) {
 
-        listingRecyclerView = rootView.findViewById(R.id.rv_listings);
+        listingRecyclerView = rootView.findViewById(R.id.rv_search_listings);
         listingRecyclerView.setHasFixedSize(true);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext(),
@@ -78,29 +76,13 @@ public class ListingFragment extends Fragment {
         listingRecyclerView.setLayoutManager(mLayoutManager);
 
 
-        listingsAdapter = new ListingsOuterAdapter(getTitles(), new CallBacks.ListingsAdapterCallBack() {
+        listingsAdapter = new ListingsAdapter(new CallBacks.ListingsAdapterCallBack() {
             @Override
             public void onListingClicked(int position) {
                 Dialogs.showDialog(getActivity());
             }
-        });
+        }, true);
         listingRecyclerView.setAdapter(listingsAdapter);
-    }
-
-    //todo remove this after backend is ready
-    private List<String> getTitles(){
-        List<String> titles = new ArrayList<>();
-        titles.add("Flatmates & Paying Guests");
-        titles.add("For Rent - Flat & Apartment ");
-        titles.add("For Rent - House");
-        titles.add("For Rent - Land");
-        titles.add("For Rent - Office Space");
-        titles.add("For Rent - Shutter & Shop Space");
-        titles.add("For Sale - Commercial Property");
-        titles.add("For Sale - Flat & Apartment");
-        titles.add("For Sale - House");
-        titles.add("For Sale - Land");
-        return titles;
     }
 
     @Override
