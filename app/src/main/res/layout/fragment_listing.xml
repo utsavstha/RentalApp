@@ -11,7 +11,8 @@
         android:minHeight="50dp"
         android:layout_height="wrap_content">
         <TextView
-            android:padding="8dp"
+            android:padding="12dp"
+            android:textSize="18sp"
             android:textColor="@color/colorWhite"
             android:gravity="center_vertical"
             android:text="@string/app_name"

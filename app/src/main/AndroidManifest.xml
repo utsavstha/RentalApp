@@ -32,7 +32,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.Filter"></activity>
+        <activity android:name=".activity.Filter" />
+        <activity android:name=".activity.PostAds"></activity>
     </application>
 
 </manifest>

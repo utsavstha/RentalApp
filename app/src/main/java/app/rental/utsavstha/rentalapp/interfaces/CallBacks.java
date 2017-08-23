@@ -9,4 +9,8 @@ public interface CallBacks {
         void onListingClicked(int position);
     }
 
+    interface AlertsAdapterCallBack{
+        void onAlertClicked(int position);
+    }
+
 }

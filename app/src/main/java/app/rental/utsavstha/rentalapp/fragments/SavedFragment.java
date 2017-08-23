@@ -2,11 +2,18 @@ package app.rental.utsavstha.rentalapp.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import app.rental.utsavstha.rentalapp.R;
+import app.rental.utsavstha.rentalapp.Utils.Dialogs;
+import app.rental.utsavstha.rentalapp.adapters.ListingsAdapter;
+import app.rental.utsavstha.rentalapp.interfaces.CallBacks;
+
+import static app.rental.utsavstha.rentalapp.RentApplication.getContext;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +31,7 @@ public class SavedFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView recyclerView;
 
     public SavedFragment() {
         // Required empty public constructor
@@ -52,7 +60,28 @@ public class SavedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saved, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_saved, container, false);
+
+        init(rootView);
+        return rootView;
+    }
+
+    private void init(View rootView) {
+        recyclerView = rootView.findViewById(R.id.rv_saved);
+        recyclerView.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext(),
+                LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(mLayoutManager);
+
+        ListingsAdapter listingsAdapter = new ListingsAdapter(new CallBacks.ListingsAdapterCallBack() {
+            @Override
+            public void onListingClicked(int position) {
+                Dialogs.showDialog(getActivity());
+            }
+        }, true);
+
+        recyclerView.setAdapter(listingsAdapter);
     }
 
     @Override

@@ -13,4 +13,10 @@
     <string name="property_details_dummy">Lorem ipsum dolor sit amet, ut vis oportere similique. No duo habeo omittantur, ius ferri movet facete in, nam omnis illud voluptaria ea. Purto appellantur philosophia cu has, at malis dicunt nominavi per. Per in cibo iisque, has iuvaret fastidii ne.  Pro bonorum vocibus eleifend ei, id est tantas causae senserit. Cu nam minim mnesarchum. Dicta invidunt usu no. Ei eam munere aliquam imperdiet, debitis civibus consectetuer mei at. Ad ponderum consulatu ius, his id purto utinam suavitate.  Laudem legere cu per, alii menandri nominati ex vis. Ei eum paulo inermis theophrastus. Habeo possim posidonium no sit, eos quando consequuntur id, no mea verear delicata. Ei eos malorum delicatissimi, dicam suscipit postulant est ex. Iuvaret democritum sed te, has summo eloquentiam cu, audire utamur pri id.  Eum sint aeque ad, qui eu adhuc falli dolores. Vitae epicuri et ius. Nisl fierent explicari ut his, sea noster graecis tibique ex, mel quis quidam similique at. An molestie nominati quaestio ius, solet ponderum cum ut, ne per quem tacimates.</string>
     <string name="flatmates_and_paying_guests">Flatmates and Paying guests</string>
     <string name="maps_api">AIzaSyDYBLUfFpalvDYXMcvVJsZ5sE8TA9Ggtkc</string>
+    <string name="more_description">Here you can access your application setting, switch between buyer/seller and edit your profile.</string>
+    <string name="listings_description">These are the Rental listings shown by category. Tap SEE ALL to view more.</string>
+    <string name="alerts_description">Your personal alerts based on saved filter and search history are displayed here.</string>
+    <string name="saved_description">When you tap heart icon on listings they are saved here.</string>
+    <string name="search_description">Search for listings on a list or a map, use filters to narrow your search.</string>
+    <string name="text_post_ads">Post Ads</string>
 </resources>

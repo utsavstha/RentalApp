@@ -1,13 +1,82 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="app.rental.utsavstha.rentalapp.fragments.ListingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/text_more" />
+        android:minHeight="50dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:text="@string/text_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</FrameLayout>
+        <ImageView
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/colorWhite"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/colorMoreBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/more_user_icon"
+            android:layout_marginTop="18dp"
+            android:tint="@color/colorWhite"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_action_user"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/tv_user_name"
+            android:textColor="@color/colorBlack"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_below="@+id/more_user_icon"
+            android:text="Utsav Shrestha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_user_name"
+            android:textColor="@color/colorPrimary"
+            android:text="VIEW PROFILE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_post_an_ad"
+        android:padding="16dp"
+        android:text="Post an Ad"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:alpha=".5"
+        android:padding="16dp"
+        android:text="View your ads"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

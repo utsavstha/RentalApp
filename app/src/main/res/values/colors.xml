@@ -8,4 +8,6 @@
     <color name="colorOrange">#F2331F</color>
     <color name="colorPrimaryText">#4C4C4C</color>
     <color name="colorSecondaryText">#838383</color>
+    <color name="colorBorder">#a9a9a9</color>
+    <color name="colorMoreBackground">#c6c5c5</color>
 </resources>
